@@ -8,7 +8,7 @@ def model(x, m, c, **kwargs):
 
 def make_data(points, m , c, xerr, yerr, seed):
     np.random.seed(int(seed))
-    x_true = np.linspace(10,100,points)
+    x_true = np.linspace(0,100,points)
     y_true = model(x = x_true, m = m, c = c)
 
     xerr = xerr * np.random.randn(points)
